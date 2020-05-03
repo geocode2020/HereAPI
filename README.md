@@ -1,4 +1,4 @@
 # HereAPI
-![Alt text](/img/logo.png)
+Web Map Design Using HERE MAPS API for JavaScript
 <br>
-Web Map Design Using HERE API
+![Alt text](/img/logo.png)
