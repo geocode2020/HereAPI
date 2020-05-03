@@ -145,3 +145,48 @@ map.addEventListener('tap',function(evt){
 * The following figure shows the output
 ![Alt text](/images/screen5.png)
 
+## Map Objects
+* Inside Script tag write the following code to add Marker
+```javascript
+var markerIcon = new H.map.Icon('img/locationpin.png');
+var markerPos = new H.map.Marker({lat:21.422542, lng:39.826230},{icon:markerIcon});
+map.addObject(markerPos);
+
+```
+* to add line write the following code
+```javascript
+var lineStyle = {
+    strokeColor:'rgba(100,100,200,0.7)',
+    lineWidth:15
+};
+var points = [
+    {lat:21.422276, lng:39.833120},
+    {lat:21.420945, lng:39.831814},
+    {lat:21.420161, lng:39.827466}
+];
+var lineString = new H.geo.LineString();
+points.forEach(function(point){
+    lineString.pushPoint(point);
+});
+var line = new H.map.Polyline(lineString,{style:lineStyle});
+map.addObject(line);
+```
+
+* The Following Screenshot shows the ouput
+
+![Alt text](/images/screen6.png)
+
+## Overlay
+* add the following code to add overlay images
+```javascript
+var overlay = new H.map.Overlay(
+    new H.geo.Rect(
+        32.7673044905, 34.5691255652, 15.1785726721, 55.6920418144
+    ),
+    'data/image1.jpg'
+);
+map.addObject(overlay);
+```
+
+* The Following Screenshot shows the ouput
+![Alt text](/images/screen7.png)
