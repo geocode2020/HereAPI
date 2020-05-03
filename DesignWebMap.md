@@ -80,7 +80,7 @@ var platform = new H.service.Platform({
 </html>
 ```
 * The following screenshot shows the output
-![Alt text](/images/screen1.png)
+![Alt text](/img/screen1.png)
 
 ## Add UI Controls
 * In the head section include the following javascript and css modules
@@ -93,7 +93,7 @@ var platform = new H.service.Platform({
 var ui = new H.ui.UI.createDefault(map,layers);
 ```
 * The following screenshot shows the output
-![Alt text](/images/screen2.png)
+![Alt text](/img/screen2.png)
 
 * We can change the position of UI control, for example add the following code to change the position of MapSettings UI control
 ```javascript
@@ -111,7 +111,7 @@ ui.addBubble(bubble);
 
 ```
 * The following Screenshot shows the InfoBubble
-![Alt text](/images/screen4.png)
+![Alt text](/img/screen4.png)
 
 ## Map Events and Interaction
 * to Add Map Events and Interactions, in the head section include the following modules
@@ -143,12 +143,12 @@ map.addEventListener('tap',function(evt){
 ```
 
 * The following figure shows the output
-![Alt text](/images/screen5.png)
+![Alt text](/img/screen5.png)
 
 ## Map Objects
 * Inside Script tag write the following code to add Marker
 ```javascript
-var markerIcon = new H.map.Icon('images/locationpin.png');
+var markerIcon = new H.map.Icon('img/locationpin.png');
 var markerPos = new H.map.Marker({lat:21.422542, lng:39.826230},{icon:markerIcon});
 map.addObject(markerPos);
 
@@ -174,7 +174,7 @@ map.addObject(line);
 
 * The Following Screenshot shows the ouput
 
-![Alt text](/images/screen6.png)
+![Alt text](/img/screen6.png)
 
 ## Overlay
 * add the following code to add overlay images
@@ -189,4 +189,4 @@ map.addObject(overlay);
 ```
 
 * The Following Screenshot shows the ouput
-![Alt text](/images/screen7.png)
+![Alt text](/img/screen7.png)
