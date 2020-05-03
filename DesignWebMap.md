@@ -79,5 +79,69 @@ var platform = new H.service.Platform({
 </body>
 </html>
 ```
-* following is output of our code
+* The following screenshot shows the output
 ![Alt text](/images/screen1.png)
+
+## Add UI Controls
+* In the head section include the following javascript and css modules
+```html
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <link rel="stylesheet" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+```
+* inside the script tag add the following code
+```javascript
+var ui = new H.ui.UI.createDefault(map,layers);
+```
+* The following screenshot shows the output
+![Alt text](/images/screen2.png)
+
+* We can change the position of UI control, for example add the following code to change the position of MapSettings UI control
+```javascript
+ui.getControl('mapsettings').setAlignment('top-left');
+```
+
+### Add InfoBubble
+* Write the following code to add InfoBubble inside the script tag
+```javascript
+var bubble = new H.ui.InfoBubble(
+    {lat:21.422542,lng:39.826230},
+    {content:'<b>MAKKA</b>'}
+);
+ui.addBubble(bubble);
+
+```
+* The following Screenshot shows the InfoBubble
+![Alt text](/images/screen4.png)
+
+## Map Events and Interaction
+* to Add Map Events and Interactions, in the head section include the following modules
+```html
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+```
+* write the following code inside the script tag
+```javascript
+var ui = new H.ui.UI.createDefault(map,layers);
+ui.getControl('mapsettings').setAlignment('top-left');
+var mapEvents = new H.mapevents.MapEvents(map);
+var behavior = new H.mapevents.Behavior(mapEvents);
+
+```
+* Write the following code to add Onclick Events, the event handler shows click location coordinates in InfoBubble
+```javascript
+map.addEventListener('tap',function(evt){
+    var coords = map.screenToGeo(
+        evt.currentPointer.viewportX,
+        evt.currentPointer.viewportY
+    );
+    let bubble = new H.ui.InfoBubble(
+        {lat: coords.lat , lng: coords.lng},
+        {content: coords.lat + ', ' + coords.lng}
+    );
+    ui.addBubble(bubble);
+});
+
+```
+
+* The following figure shows the output
+![Alt text](/images/screen5.png)
+
