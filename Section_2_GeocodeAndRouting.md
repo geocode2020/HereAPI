@@ -76,7 +76,7 @@ service.reverseGeocode({at:'21.422542,39.826230'},(result)=>{
 ```
 ## Routing
 * add the following code to find the best rout between two waypoints
-```html
+```javascript
 var router = platform.getRoutingService();
 // specify routing parameters
 var routingParams = {
