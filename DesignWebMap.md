@@ -148,7 +148,7 @@ map.addEventListener('tap',function(evt){
 ## Map Objects
 * Inside Script tag write the following code to add Marker
 ```javascript
-var markerIcon = new H.map.Icon('img/locationpin.png');
+var markerIcon = new H.map.Icon('images/locationpin.png');
 var markerPos = new H.map.Marker({lat:21.422542, lng:39.826230},{icon:markerIcon});
 map.addObject(markerPos);
 
