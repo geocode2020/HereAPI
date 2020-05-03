@@ -36,7 +36,7 @@
 ```
 * inside the script tag write the following javascript code
 ```javascript
-	var platform = new H.service.Platform({
+var platform = new H.service.Platform({
         'apikey':'PUT YOUR API KER HERE'
     });
     var layers = platform.createDefaultLayers();
@@ -79,3 +79,5 @@
 </body>
 </html>
 ```
+* following is output of our code
+![Alt text](/images/screen1.png)
